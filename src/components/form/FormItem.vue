@@ -91,7 +91,7 @@ export default {
     resetField () {
       this.validateState = ''
       this.validateMessage = ''
-      this.form.mode[this.prop] = this.initialValue
+      this.form.model[this.prop] = this.initialValue
     }
   },
   mounted () {
