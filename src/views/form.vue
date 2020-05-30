@@ -7,6 +7,12 @@
       <x-form-item label="邮箱" prop="mail">
         <x-input v-model="formData.mail"/>
       </x-form-item>
+      <x-form-item label="邮箱" prop="mail">
+        <x-checkbox-group v-model="formData.enjons">
+          <x-checkbox label="游戏">游戏</x-checkbox>
+          <x-checkbox label="看书">看书</x-checkbox>
+        </x-checkbox-group>
+      </x-form-item>
     </x-form>
      <button @click="handleSubmit">提交</button>
      <button @click="handleReset">重置</button>
@@ -16,13 +22,17 @@
 import xForm from '@/components/form/Form.vue'
 import xFormItem from '@/components/form/FormItem.vue'
 import xInput from '@/components/Input/input.vue'
+import xCheckbox from '@/components/checkbox/checkbox.vue'
+import xCheckboxGroup from '@/components/checkbox/checkboxGroup.vue'
+
 export default {
   name: 'testform',
   data () {
     return {
       formData: {
         name: '',
-        mail: ''
+        mail: '',
+        enjons: []
       },
       rules: {
         name: [
@@ -38,13 +48,16 @@ export default {
   components: {
     xForm,
     xFormItem,
-    xInput
+    xInput,
+    xCheckbox,
+    xCheckboxGroup
   },
   methods: {
     handleSubmit () {
       this.$refs.form.validate((valid) => {
         if (valid) {
-          window.alert('提交成功')
+          console.log(this.formData)
+          window.alert('提交成功' + this.formData)
         } else {
           window.alert('表达校验失败')
         }
