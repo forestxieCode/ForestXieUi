@@ -6,3 +6,4 @@
 ## 已实现自定组件
 
 + form表单
++ checkbox
