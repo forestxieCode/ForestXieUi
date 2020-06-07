@@ -1,7 +1,6 @@
 import Alert from './alert.vue'
 import Vue from 'vue'
 
-console.log(Alert)
 Alert.newInstance = properties => {
   const props = properties || {}
   const Instance = new Vue({

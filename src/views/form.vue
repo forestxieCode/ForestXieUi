@@ -7,7 +7,7 @@
       <x-form-item label="邮箱" prop="mail">
         <x-input v-model="formData.mail"/>
       </x-form-item>
-      <x-form-item label="邮箱" prop="mail">
+      <x-form-item label="爱好">
         <x-checkbox-group v-model="formData.enjons">
           <x-checkbox label="游戏">游戏</x-checkbox>
           <x-checkbox label="看书">看书</x-checkbox>

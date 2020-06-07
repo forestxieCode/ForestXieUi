@@ -5,6 +5,7 @@ import index from '@/views/index.vue'
 import form from '@/views/form.vue'
 import display from '@/views/display.vue'
 import alert from '@/views/alert.vue'
+import table from '@/views/table-render.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +29,11 @@ export default new Router({
       path: '/display',
       name: 'display',
       component: display
+    },
+    {
+      path: '/table',
+      name: 'table',
+      component: table
     }
   ]
 })
