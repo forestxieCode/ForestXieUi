@@ -6,6 +6,7 @@ import form from '@/views/form.vue'
 import display from '@/views/display.vue'
 import alert from '@/views/alert.vue'
 import table from '@/views/table-render.vue'
+import test from '@/views/test.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +35,11 @@ export default new Router({
       path: '/table',
       name: 'table',
       component: table
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
     }
   ]
 })
